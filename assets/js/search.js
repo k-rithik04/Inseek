@@ -3,12 +3,12 @@
 
 
 // TODO: fix the save button handler leak, it stacks listeners on re-render
-$(document).ready(function() {
+$(document).ready(function()  {
 
-	var fallbackJobs = [
-		{ title: "Software Engineer", company: "TechCorp Lanka", location: "Colombo", category: "IT", type: "Full Time", salary: "150,000", postedDate: "2026-06-08", description: "Design, build and maintain web applications using HTML, CSS and JavaScript. 2+ years of experience preferred." },
-		{ title: "Front-End Developer", company: "Bright Web", location: "Kandy", category: "IT", type: "Full Time", salary: "120,000", postedDate: "2026-06-10", description: "Build responsive, user-friendly interfaces with HTML, CSS, JavaScript and jQuery." },
-		{ title: "Accountant", company: "FinTrust", location: "Colombo", category: "Finance", type: "Full Time", salary: "95,000", postedDate: "2026-06-02", description: "Manage company accounts, prepare monthly financial reports and handle payroll." },
+    var fallbackJobs = [
+		{ title: "Software Engineer",   company: "TechCorp Lanka", location: "Colombo", category: "IT", type: "Full Time", salary: "150,000", postedDate: "2026-06-08", description: "Design, build and maintain web applications using HTML, CSS and JavaScript. 2+ years of experience preferred." },
+	   { title: "Front-End Developer", company: "Bright Web",  location: "Kandy", category: "IT", type: "Full Time", salary: "120,000", postedDate: "2026-06-10", description: "Build responsive, user-friendly interfaces with HTML, CSS, JavaScript and jQuery." },
+		{ title: "Accountant", company: "FinTrust", location: "Colombo", category: "Finance", type: "Full Time", salary:  "95,000", postedDate: "2026-06-02", description: "Manage company accounts, prepare monthly financial reports and handle payroll." },
 		{ title: "Marketing Executive", company: "AdVision", location: "Galle", category: "Marketing", type: "Full Time", salary: "80,000", postedDate: "2026-06-11", description: "Plan and run digital marketing campaigns and manage social media channels." },
 		{ title: "Nursing Officer", company: "City Hospital", location: "Kandy", category: "Health", type: "Full Time", salary: "90,000", postedDate: "2026-06-05", description: "Provide quality patient care and assist doctors in the medical ward." },
 		{ title: "Data Entry Assistant", company: "QuickData", location: "Colombo", category: "IT", type: "Part Time", salary: "45,000", postedDate: "2026-06-12", description: "Enter and verify data accurately. Basic computer knowledge is required." },
@@ -66,12 +66,12 @@ $(document).ready(function() {
 		{ title: "Training & Development Officer", company: "PeopleFirst HR", location: "Kandy", category: "HR", type: "Full Time", salary: "82,000", postedDate: "2026-06-11", description: "Design and deliver training programmes to upskill employees and support the performance review cycle." },
 		{ title: "Operations Manager", company: "MegaMart", location: "Colombo", category: "Operations", type: "Full Time", salary: "180,000", postedDate: "2026-06-10", description: "Oversee supply chain, logistics and store operations to ensure efficiency and customer satisfaction." },
 		{ title: "Logistics Coordinator", company: "SwiftLog Lanka", location: "Galle", category: "Operations", type: "Full Time", salary: "72,000", postedDate: "2026-06-09", description: "Coordinate inbound and outbound shipments, liaise with freight partners and maintain delivery records." },
-		{ title: "Legal Officer", company: "Lanka Law Associates", location: "Colombo", category: "Legal", type: "Full Time", salary: "115,000", postedDate: "2026-06-14", description: "Draft and review contracts, provide legal advice to management and ensure company-wide regulatory compliance." }
+		 { title: "Legal Officer", company: "Lanka Law Associates", location: "Colombo", category: "Legal", type: "Full Time", salary: "115,000", postedDate: "2026-06-14", description: "Draft and review contracts, provide legal advice to management and ensure company-wide regulatory compliance." }
 	]; //passe json karamuuu
 
 	function getRelativeDate(dateStr) {
 		let posted = new Date(dateStr);
-		let now = new Date('2026-06-14');
+		 let now = new Date('2026-06-14');
 		let diffMs = now - posted;
 		let diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 		if (diffDays === 0) return 'Today';
@@ -100,12 +100,12 @@ $(document).ready(function() {
 	let allJobs = processJobs(fallbackJobs);
 
 	function getSavedJobs() {
-		var stored = localStorage.getItem('inseek_saved_jobs');
+	    var stored = localStorage.getItem('inseek_saved_jobs');
 		return stored ? JSON.parse(stored) : [];
 	}
 
 	function setSavedJobs(jobs) {
-		localStorage.setItem('inseek_saved_jobs', JSON.stringify(jobs));
+		 localStorage.setItem('inseek_saved_jobs', JSON.stringify(jobs));
 	}
 
 	function isSaved(job) {

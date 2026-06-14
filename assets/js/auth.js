@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
   var button_show_register = document.getElementById('button_show_register');
   var button_show_login = document.getElementById('button_show_login');
 
-	var login_form = document.getElementById('login_form');
+	  var login_form = document.getElementById('login_form');
 	var register_form = document.getElementById('register_form');
 
 	var nav_auth_button = document.getElementById('nav_auth_button');
 
-	function showRegister() {
+  function showRegister() {
 		if (login_div && register_div) {
-			login_div.style.display = 'none';
-			register_div.style.display = 'block';
+		 login_div.style.display = 'none';
+			 register_div.style.display = 'block';
 			if (nav_auth_button) nav_auth_button.textContent = 'Log In';
 		}
 	}
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	if (login_form) {
 		login_form.addEventListener('submit', function(e) {
-			e.preventDefault();
+		  e.preventDefault();
 			let my_email = document.getElementById('login_email').value;
 			let my_pass = document.getElementById('login_password').value;
 

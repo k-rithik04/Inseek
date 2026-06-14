@@ -4,7 +4,6 @@
 
 
 
-
 //if anyone adds a field this breaks
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -36,18 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem('profile_middle_name')) middleName.value = localStorage.getItem('profile_middle_name');
         if (localStorage.getItem('profile_last_name')) lastName.value = localStorage.getItem('profile_last_name');
 		if (localStorage.getItem('profile_dob')) document.querySelector('input[type="date"]').value = localStorage.getItem('profile_dob');
-		if (localStorage.getItem('profile_gender')) {
+		
+        if (localStorage.getItem('profile_gender')) {
             var savedGender = localStorage.getItem('profile_gender');
             genderRadios.forEach(function(r) {
                 if (r.nextElementSibling.textContent.trim() === savedGender) r.checked = true;
 			});
         }
+
 		if (localStorage.getItem('profile_career_status')) {
             var savedCs = localStorage.getItem('profile_career_status');
             for (var i = 0; i < careerStatus.options.length; i++) {
                 if (careerStatus.options[i].text === savedCs) careerStatus.selectedIndex = i;
             }
 		}
+
 		if (localStorage.getItem('profile_email')) document.querySelector('input[type="email"]').value = localStorage.getItem('profile_email');
         if (localStorage.getItem('profile_phone')) phoneInput();
 		if (localStorage.getItem('profile_address1')) address1Input();
@@ -64,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+        
         // TODO: refactor these 3 functions into one with a parameter lmao
         function address1Input() {
             var count = 0;
@@ -75,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+
         function address2Input() {
             var count = 0;
 			var els = document.querySelectorAll('.profile-card input.form-control');
@@ -85,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+
         function cityInput() {
             var count = 0;
 			var els = document.querySelectorAll('.profile-card input.form-control');
@@ -95,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+
         function countrySelect() {
             var savedCountry = localStorage.getItem('profile_country');
 			var sel = document.querySelectorAll('.profile-card select');
@@ -117,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('profile_middle_name', middleName ? middleName.value : '');
         localStorage.setItem('profile_last_name', lastName ? lastName.value : '');
         localStorage.setItem('profile_dob', dob ? dob.value : '');
+        
 		genderRadios.forEach(function(r) {
             if (r.checked) localStorage.setItem('profile_gender', r.nextElementSibling.textContent.trim());
         });
@@ -131,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var addr2Idx = -1;
 		var cityIdx = -1;
 		var idx = 0;
+        
 		for (var i = 0; i < textInputs.length; i++) {
             if (!textInputs[i].placeholder) {
                 if (idx === 0) phoneIdx = i;
@@ -172,8 +180,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var photoInput = document.getElementById('photoInput');
     var profileImg = document.getElementById('profileImage');
+    
     if (photoInput && profileImg) {
         if (localStorage.getItem('profile_photo')) profileImg.src = localStorage.getItem('profile_photo');
+        
         photoInput.addEventListener('change', function(e) {
             var file = e.target.files[0];
             if (!file) return;

@@ -2,36 +2,37 @@
 
 $(document).ready(function() {
 
-	function showStep(step) {
-		$('.form-step').hide();
-		$('#step-' + step).show();
-		$('.step-indicator').css('background-color', '#dee2e6');
-		for (var i = 1; i <= step; i++) {
-			$('#step-indicator-' + i).css('background-color', 'var(--brand)');
-		}
-	}
+  function showStep(step) {
+    $('.form-step').hide();
+	$('#step-' + step).show();
+   $('.step-indicator').css('background-color', '#dee2e6');
+	  for (var i = 1; i <= step; i++) {
+	    $('#step-indicator-' + i).css('background-color', 'var(--brand)');
+	  }
+  }
 
 	function clearErrors(container) {
-		$(container).find('.text-danger').text('');
+	   $(container).find('.text-danger').text('');
 		$(container).find('.form-control').css('border-color', 'rgba(0,0,0,0.1)');
 	}
 
-	function showError(input, msg) {
-		$(input).closest('.field').find('.text-danger').text(msg);
-		$(input).css('border-color', '#dc3545');
-	}
+  function showError(input, msg) {
+	  $(input).closest('.field').find('.text-danger').text(msg);
+	    $(input).css('border-color', '#dc3545');
+  }
 
 	function validateStep1() {
-		clearErrors('#step-1');
-		var valid = true;
+		 clearErrors('#step-1');
+		  var valid = true;
 
 		if (!$.trim($('#name').val())) {
 			showError('#name', 'Full name is required.');
 			valid = false;
 		}
+
 		if (!$.trim($('#address').val())) {
 			showError('#address', 'Address is required.');
-			valid = false;
+			  valid = false;
 		}
 		if (!$.trim($('#nic').val())) {
 			showError('#nic', 'NIC / Passport number is required.');
@@ -41,6 +42,7 @@ $(document).ready(function() {
 			showError('#email', 'Please enter a valid email address.');
 			valid = false;
 		}
+
 		if (!$.trim($('#phone').val()) || !/^0\d{9}$/.test($('#phone').val())) {
 			showError('#phone', 'Please enter a valid phone number (e.g. 0771234567).');
 			valid = false;
@@ -63,10 +65,12 @@ $(document).ready(function() {
 				valid = false;
 			}
 		}
+
 		if (!$.trim($('#skills').val())) {
 			showError('#skills', 'Please enter at least one skill.');
 			valid = false;
 		}
+
 		if (!$.trim($('#experience').val()) && $('#experience').val() !== '0') {
 			showError('#experience', 'Please enter your years of experience.');
 			valid = false;

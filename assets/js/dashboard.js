@@ -99,13 +99,13 @@ $(document).ready(function () {
 	}
 
 	function setBannerBg(el, n) {
-		el.css('background',
+	   el.css('background',
 			'linear-gradient(135deg, rgba(0, 123, 255, 0.71), rgba(0, 89, 198, 0.62)), url("' + getBannerUrl(n) + '")');
-		el.css('background-size', 'cover');
-		el.css('background-position', 'center');
+		  el.css('background-size', 'cover');
+		 el.css('background-position', 'center');
 	}
 
-	function preloadNextBanner(n) {
+   function preloadNextBanner(n) {
 		var img = new Image();
 		img.src = getBannerUrl(n);
 	}

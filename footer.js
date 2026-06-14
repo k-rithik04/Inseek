@@ -52,10 +52,10 @@ document.write(`
                       <h5 class="fw-bold mb-4 text-white">Follow Us</h5>
                       <div class="d-flex mb-4">
                           <a href="#" class="d-flex justify-content-center align-items-center rounded-circle border border-secondary text-light me-3 transition-style" style="width: 45px; height: 45px; text-decoration: none;">
-                              <i class="bi bi-facebook fs-5"></i>
+                            <i class="bi bi-facebook fs-5"></i>
                           </a>
                           <a href="#" class="d-flex justify-content-center align-items-center rounded-circle border border-secondary text-light me-3 transition-style" style="width: 45px; height: 45px; text-decoration: none;">
-                              <i class="bi bi-instagram fs-5"></i>
+                               <i class="bi bi-instagram fs-5"></i>
                           </a>
                           <a href="#" class="d-flex justify-content-center align-items-center rounded-circle border border-secondary text-light" style="width: 45px; height: 45px; text-decoration: none;">
                               <i class="bi bi-whatsapp fs-5"></i>
