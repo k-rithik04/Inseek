@@ -6,43 +6,26 @@ STUDENT REGISTRATION NUMBERS & CONTRIBUTIONS
 
 1. Rithika
    Student ID: CS/2024/011
-   Contribution: Dashboard page (dashboard.html), persistent navigation
-   component, master stylesheet (global.css), dashboard.js
 
 2. Nimeth
-   Student ID: [INSERT STUDENT ID]
-   Contribution: Home page search engine (index.html), multi-criteria
-   search and filtering logic (search.js), jQuery dynamic data tables
+   Student ID: CS/2024/076
 
 3. Nisagi
    Student ID: CS/2024//052
-   Contribution: Candidate profile page (profile.html), collapsible
-   section UI with jQuery animations, inline profile editing
 
 4. Dinuga
-   Student ID: [INSERT STUDENT ID]
-   Contribution: Authentication page (auth.html), client-side form
-   validation (auth.js) with email regex and password rules
+   Student ID: CS/2024/041
 
 5. Yasith
-   Student ID: [INSERT STUDENT ID]
-   Contribution: Job categories page (categories.html), sector grid
-   with hover animations, vacancy counter display
+   Student ID: CS/2024/002
 
 6. Prabodha
-   Student ID: [INSERT STUDENT ID]
-   Contribution: Application portal (apply.html), file upload zone
-   with drag-and-drop, file validation (apply.js)
+   Student ID: CS/2024/026
 
 7. Tharusha
-   Student ID: [INSERT STUDENT ID]
-   Contribution: Company directory page (companies.html), corporate
-   profile cards, embedded multimedia, review carousel
+   Student ID: CS/2024/007
 
 8. Dulina
-   Student ID: [INSERT STUDENT ID]
-   Contribution: Saved jobs tracker (saved-jobs.html), global site
-   footer with JS Date timestamps, bookmark management
+   Student ID: CS/2024/010
 
-NOTE: Each member contributed equally to the design, development, and test
-      the Inseek platform.
+
