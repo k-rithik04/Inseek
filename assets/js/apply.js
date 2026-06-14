@@ -1,4 +1,4 @@
-// Prabodha - apply form step validation
+//apply form step validation
 
 $(document).ready(function() {
 

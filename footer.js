@@ -1,4 +1,4 @@
-// Dulina's footer - shared across all pages via document.write
+// footer - shared across all pages via document.write
 //easiest way to share the footer
 let prefix = window.location.pathname.includes("docs/process") ? "../../" : "";
 

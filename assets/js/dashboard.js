@@ -1,5 +1,5 @@
 
-// Rithika's dashboard slider + featured jobs
+// dashboard slider + featured jobs
 
 
 

@@ -1,5 +1,5 @@
 
-// Nimeth's part - search filtering + job dataset
+//search filtering + job dataset
 
 
 // TODO: fix the save button handler leak, it stacks listeners on re-render

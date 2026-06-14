@@ -1,4 +1,4 @@
-// Yasith's category cards - copy pasted 4 times lol
+// copy pasted 4 times lol
 //make the see jobs links actually go somewhere kalin his wela thibila haduwa
 document.write(`
     <section class="py-5">
@@ -77,7 +77,7 @@ document.write(`
 
 
 
-            
+
         </div>
     </div>
 </section>
